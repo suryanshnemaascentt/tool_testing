@@ -84,7 +84,7 @@ from llm_planner import decide_action
 from executor import execute_step
 
 
-async def run(url, goal):
+async def run(url, goal, email=None, password=None):
 
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=False)
@@ -103,7 +103,8 @@ async def run(url, goal):
 
             dom = await extract_live_dom(page)
 
-            action = await decide_action(goal, dom, page.url)
+            # 🔥 Pass email and password to decision maker
+            action = await decide_action(goal, dom, page.url, email, password)
             print("🤖 ACTION:", action)
 
             if action.get("action") == "done":
@@ -117,8 +118,10 @@ async def run(url, goal):
 
 if __name__ == "__main__":
     # 🔥 Take input dynamically
-    url = input("Enter URL: ").strip()
-    goal = input("Enter Goal: ").strip()
+    url ="https://grid.ds.ascentt.ai/login"
+    goal = "login and create project"
+    email = "suryansh.nema@ascentt.com"
+    password = "Sn94948988@"
 
-    asyncio.run(run(url, goal))
+    asyncio.run(run(url, goal, email, password))
 

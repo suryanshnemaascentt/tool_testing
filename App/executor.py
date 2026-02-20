@@ -139,32 +139,110 @@ async def execute_step(page, dom, step):
 
     try:
         if action == "wait":
-            await page.wait_for_timeout(step.get("seconds", 2) * 1000)
+            seconds = step.get("seconds", 2)
+            print(f"⏳ Waiting {seconds} seconds...")
+            await page.wait_for_timeout(seconds * 1000)
             return True
 
         if action == "done":
+            print("✅ Goal completed!")
             return True
 
         if not selector:
             print("❌ No selector provided")
             return False
 
-        target_locator = page.locator(selector)
-        await target_locator.wait_for(state="visible", timeout=5000)
+        print(f"\n🔍 Executing action: {action}")
+        print(f"   Selector: {selector}")
 
-        if action == "click":
-            await target_locator.click()
+        locator = page.locator(selector)
 
-        elif action == "type":
-            await target_locator.fill(value or "")
-            await page.keyboard.press("Enter")   # helpful for login
-            await page.wait_for_timeout(500)
-
-        else:
+        count = await locator.count()
+        print(f"   Found {count} matching element(s)")
+        if count == 0:
+            print("❌ Element not found")
             return False
 
-        return True
+        element = locator.first
+
+        await element.scroll_into_view_if_needed()
+        await page.wait_for_timeout(200)
+
+        # =========================================================
+        # CLICK
+        # =========================================================
+        if action == "click":
+            try:
+                await element.click(timeout=4000)
+                print("   ✅ Click successful!")
+                await page.wait_for_timeout(500)
+                return True
+            except Exception as e:
+                print(f"❌ Click failed: {e}")
+                try:
+                    await element.click(force=True)
+                    print("   🔥 Force click successful!")
+                    await page.wait_for_timeout(500)
+                    return True
+                except Exception as e2:
+                    print(f"❌ Force click failed: {e2}")
+                    return False
+
+        # =========================================================
+        # TYPE
+        # =========================================================
+        elif action == "type":
+            try:
+                print(f"   ⌨️ Typing value: {value}")
+
+                # Clear existing value
+                await element.fill("")
+                await page.wait_for_timeout(200)
+
+                # Fill new value (works for text + date)
+                await element.fill(value or "")
+                print("   ✅ Value filled")
+
+                await page.wait_for_timeout(500)
+
+                # 🔥 Handle MUI autocomplete dropdown
+                try:
+                    await page.wait_for_selector("ul[role='listbox']", timeout=1500)
+
+                    option = page.locator("li[role='option']").first
+                    if await option.count() > 0:
+                        await option.click()
+                        print("   ✅ Clicked first dropdown option")
+
+                except:
+                    pass
+
+                await page.wait_for_timeout(500)
+                return True
+
+            except Exception as e:
+                print(f"❌ Type failed: {e}")
+                return False
+
+        # =========================================================
+        # SELECT (for real <select>)
+        # =========================================================
+        elif action == "select":
+            try:
+                await element.select_option(value)
+                print("   ✅ Select successful!")
+                await page.wait_for_timeout(500)
+                return True
+            except Exception as e:
+                print(f"❌ Select failed: {e}")
+                return False
+
+        else:
+            print(f"❌ Unknown action: {action}")
+            return False
 
     except Exception as e:
-        print("Executor error:", e)
+        print(f"❌ Executor error: {e}")
+        import traceback
+        traceback.print_exc()
         return False

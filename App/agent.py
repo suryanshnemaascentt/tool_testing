@@ -302,11 +302,11 @@ def get_inputs():
 
     # Credentials
     print("\n📌 Login Details")
-    url      = input("   App URL  (Enter to use default): ").strip()
+    url      = "https://grid.ds.ascentt.ai/login"
     if not url:
         url = "https://grid.ds.ascentt.ai/login"
-    email    = input("   Email    : ").strip()
-    password = input("   Password : ").strip()
+    email    = "suryansh.nema@ascentt.com"
+    password = "Sn94948988@"
 
     # Task
     print("\n📌 Task")

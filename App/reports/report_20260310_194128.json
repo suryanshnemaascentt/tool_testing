@@ -1,0 +1,156 @@
+{
+  "goal": "login and create project",
+  "url": "https://grid.ds.ascentt.ai/login",
+  "result": "PASS",
+  "reason": "Project 'AutoProject_194106' visible in DOM",
+  "started_at": "2026-03-10T19:40:39.624352",
+  "ended_at": "2026-03-10T19:41:28.193640",
+  "duration_sec": 48.57,
+  "total_steps": 16,
+  "steps": [
+    {
+      "step": 1,
+      "timestamp": "19:40:42",
+      "action": "type",
+      "selector": "#i0116",
+      "text": "suryansh.nema@ascentt.com",
+      "url": "https://login.microsoftonline.com/19220479-e2a8-4137-9aec-956ada3f2bd5/oauth2/v2.0/authorize?client_id=fc9b857b-f47c-4bea-ab2f-0986bf8feba5&scope=openid%20profile%20email%20https%3A%2F%2Fgraph.microsoft.com%2FGroupMember.Read.All%20offline_access&redirect_uri=https%3A%2F%2Fgrid.ds.ascentt.ai%2Fapp%2Fdashboard&client-request-id=019cd815-e5c1-73a8-9459-f14d604b2ee9&response_mode=fragment&client_info=1&domain_hint=ascentt.com&nonce=019cd815-e5c2-7626-b501-bbc67676ad24&state=eyJpZCI6IjAxOWNkODE1LWU1YzItNzQ5MS04YjY1LWRkNzRhZDUxNjYwMiIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D&x-client-SKU=msal.js.browser&x-client-VER=4.21.0&response_type=code&code_challenge=zFoLKRRwZxU4t53IxFM7HRBm6lHDSZpi3uh8zdfa-wU&code_challenge_method=S256&sso_reload=true",
+      "success": true
+    },
+    {
+      "step": 2,
+      "timestamp": "19:40:46",
+      "action": "click",
+      "selector": "#idSIButton9",
+      "text": "",
+      "url": "https://login.microsoftonline.com/19220479-e2a8-4137-9aec-956ada3f2bd5/oauth2/v2.0/authorize?client_id=fc9b857b-f47c-4bea-ab2f-0986bf8feba5&scope=openid%20profile%20email%20https%3A%2F%2Fgraph.microsoft.com%2FGroupMember.Read.All%20offline_access&redirect_uri=https%3A%2F%2Fgrid.ds.ascentt.ai%2Fapp%2Fdashboard&client-request-id=019cd815-e5c1-73a8-9459-f14d604b2ee9&response_mode=fragment&client_info=1&domain_hint=ascentt.com&nonce=019cd815-e5c2-7626-b501-bbc67676ad24&state=eyJpZCI6IjAxOWNkODE1LWU1YzItNzQ5MS04YjY1LWRkNzRhZDUxNjYwMiIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D&x-client-SKU=msal.js.browser&x-client-VER=4.21.0&response_type=code&code_challenge=zFoLKRRwZxU4t53IxFM7HRBm6lHDSZpi3uh8zdfa-wU&code_challenge_method=S256&sso_reload=true",
+      "success": true
+    },
+    {
+      "step": 3,
+      "timestamp": "19:40:47",
+      "action": "type",
+      "selector": "#i0118",
+      "text": "Sn94948988@",
+      "url": "https://login.microsoftonline.com/19220479-e2a8-4137-9aec-956ada3f2bd5/oauth2/v2.0/authorize?client_id=fc9b857b-f47c-4bea-ab2f-0986bf8feba5&scope=openid%20profile%20email%20https%3A%2F%2Fgraph.microsoft.com%2FGroupMember.Read.All%20offline_access&redirect_uri=https%3A%2F%2Fgrid.ds.ascentt.ai%2Fapp%2Fdashboard&client-request-id=019cd815-e5c1-73a8-9459-f14d604b2ee9&response_mode=fragment&client_info=1&domain_hint=ascentt.com&nonce=019cd815-e5c2-7626-b501-bbc67676ad24&state=eyJpZCI6IjAxOWNkODE1LWU1YzItNzQ5MS04YjY1LWRkNzRhZDUxNjYwMiIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D&x-client-SKU=msal.js.browser&x-client-VER=4.21.0&response_type=code&code_challenge=zFoLKRRwZxU4t53IxFM7HRBm6lHDSZpi3uh8zdfa-wU&code_challenge_method=S256&sso_reload=true",
+      "success": true
+    },
+    {
+      "step": 4,
+      "timestamp": "19:40:51",
+      "action": "click",
+      "selector": "#idSIButton9",
+      "text": "",
+      "url": "https://login.microsoftonline.com/19220479-e2a8-4137-9aec-956ada3f2bd5/oauth2/v2.0/authorize?client_id=fc9b857b-f47c-4bea-ab2f-0986bf8feba5&scope=openid%20profile%20email%20https%3A%2F%2Fgraph.microsoft.com%2FGroupMember.Read.All%20offline_access&redirect_uri=https%3A%2F%2Fgrid.ds.ascentt.ai%2Fapp%2Fdashboard&client-request-id=019cd815-e5c1-73a8-9459-f14d604b2ee9&response_mode=fragment&client_info=1&domain_hint=ascentt.com&nonce=019cd815-e5c2-7626-b501-bbc67676ad24&state=eyJpZCI6IjAxOWNkODE1LWU1YzItNzQ5MS04YjY1LWRkNzRhZDUxNjYwMiIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D&x-client-SKU=msal.js.browser&x-client-VER=4.21.0&response_type=code&code_challenge=zFoLKRRwZxU4t53IxFM7HRBm6lHDSZpi3uh8zdfa-wU&code_challenge_method=S256&sso_reload=true",
+      "success": true
+    },
+    {
+      "step": 5,
+      "timestamp": "19:40:53",
+      "action": "click",
+      "selector": "#idSIButton9",
+      "text": "",
+      "url": "https://login.microsoftonline.com/19220479-e2a8-4137-9aec-956ada3f2bd5/login",
+      "success": true
+    },
+    {
+      "step": 6,
+      "timestamp": "19:41:03",
+      "action": "click",
+      "selector": "a[aria-label='Resource\\ Planner']",
+      "text": "",
+      "url": "https://grid.ds.ascentt.ai/app/dashboard",
+      "success": true
+    },
+    {
+      "step": 7,
+      "timestamp": "19:41:05",
+      "action": "click",
+      "selector": "button:has-text('Add Project')",
+      "text": "",
+      "url": "https://grid.ds.ascentt.ai/app/resource-planner?tab=Projects",
+      "success": true
+    },
+    {
+      "step": 8,
+      "timestamp": "19:41:06",
+      "action": "type",
+      "selector": "#\u00abr6f\u00bb",
+      "text": "AutoProject_194106",
+      "url": "https://grid.ds.ascentt.ai/app/resource-planner?tab=Projects",
+      "success": true
+    },
+    {
+      "step": 9,
+      "timestamp": "19:41:10",
+      "action": "type",
+      "selector": "#\u00abr6m\u00bb",
+      "text": "2026-03-10",
+      "url": "https://grid.ds.ascentt.ai/app/resource-planner?tab=Projects",
+      "success": true
+    },
+    {
+      "step": 10,
+      "timestamp": "19:41:14",
+      "action": "type",
+      "selector": "#\u00abr6n\u00bb",
+      "text": "2026-04-09",
+      "url": "https://grid.ds.ascentt.ai/app/resource-planner?tab=Projects",
+      "success": true
+    },
+    {
+      "step": 11,
+      "timestamp": "19:41:17",
+      "action": "type",
+      "selector": "#\u00abr6c\u00bb",
+      "text": "a",
+      "url": "https://grid.ds.ascentt.ai/app/resource-planner?tab=Projects",
+      "success": true
+    },
+    {
+      "step": 12,
+      "timestamp": "19:41:20",
+      "action": "type",
+      "selector": "#\u00abr6g\u00bb",
+      "text": "a",
+      "url": "https://grid.ds.ascentt.ai/app/resource-planner?tab=Projects",
+      "success": true
+    },
+    {
+      "step": 13,
+      "timestamp": "19:41:22",
+      "action": "type",
+      "selector": "#\u00abr6j\u00bb",
+      "text": "a",
+      "url": "https://grid.ds.ascentt.ai/app/resource-planner?tab=Projects",
+      "success": true
+    },
+    {
+      "step": 14,
+      "timestamp": "19:41:24",
+      "action": "type",
+      "selector": "#\u00abr6q\u00bb",
+      "text": "a",
+      "url": "https://grid.ds.ascentt.ai/app/resource-planner?tab=Projects",
+      "success": true
+    },
+    {
+      "step": 15,
+      "timestamp": "19:41:26",
+      "action": "click",
+      "selector": "button:has-text('Create New Project')",
+      "text": "",
+      "url": "https://grid.ds.ascentt.ai/app/resource-planner?tab=Projects",
+      "success": true
+    },
+    {
+      "step": 16,
+      "timestamp": "19:41:28",
+      "action": "done",
+      "selector": "",
+      "text": "",
+      "url": "https://grid.ds.ascentt.ai/app/resource-planner?tab=Projects",
+      "success": null
+    }
+  ]
+}
